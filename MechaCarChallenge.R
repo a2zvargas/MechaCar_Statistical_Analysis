@@ -34,8 +34,9 @@ t.test(Suspension_table$PSI, mu=1500)
 # write three more RScripts using the t.test() function and 
 # its subset() argument to determine if the PSI for each manufacturing lot is statistically different 
 # from the population mean of 1,500 pounds per square inch.
-t.test(subset(Suspension_table$PSI, mu=1500, Suspension_table$Manufacturing_Lot=='Lot1'))
-t.test(subset(Suspension_table$PSI, mu=1500, Suspension_table$Manufacturing_Lot=='Lot2'))
-t.test(subset(Suspension_table$PSI, mu=1500, Suspension_table$Manufacturing_Lot=='Lot3'))
+t.test(subset(Suspension_table, Manufacturing_Lot=='Lot1')$PSI, mu=1500)
+t.test(subset(Suspension_table, Manufacturing_Lot=='Lot2')$PSI, mu=1500)
+t.test(subset(Suspension_table, Manufacturing_Lot=='Lot3')$PSI, mu=1500)
+
 
 
